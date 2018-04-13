@@ -9,6 +9,7 @@
     - change .env-example to .env and set database user then password
     - php artisan migrate
     - php artisan db:seed >> the default seeder can look at database/seeds/UserSeeder.php
+    - php artisan key:generate
 
 # Admin LTE Template 2.3.4
     download and copy :
