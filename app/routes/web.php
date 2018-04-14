@@ -11,17 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('client.base.landing');
+
+Auth::routes();
+Route::get('/admin', 'DashboardController@index')->name('admin.dashboard')->middleware(['admin','auth']);
+
+//mi
+Route::group(['middleware' => 'operator_mi', 'auth'], function () {
+Route::get('/mi/index', 'MiController@index')->name('mi.index');
+Route::get('/mi/create', 'MiController@create')->name('mi.create');
+Route::post('/mi/create', 'MiController@store')->name('mi.store');
 });
 
 
-Auth::routes();
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard')->middleware(['admin','auth']);
 
-Route::get('/mi', function(){
-    return 'Halaman MI';
-})->middleware(['operator_mi','auth']);
+
+
+
 Route::get('/smp', function(){
     return 'Halaman smp';
 })->middleware(['operator_smp','auth']);
