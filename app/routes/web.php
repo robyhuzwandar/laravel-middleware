@@ -15,5 +15,16 @@ Route::get('/', function () {
     return view('client.base.landing');
 });
 
+
 Auth::routes();
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard')->middleware(['admin','auth']);
+
+Route::get('/mi', function(){
+    return 'Halaman MI';
+})->middleware(['operator_mi','auth']);
+Route::get('/smp', function(){
+    return 'Halaman smp';
+})->middleware(['operator_smp','auth']);
+Route::get('/sma', function(){
+    return 'Halaman sma';
+})->middleware(['operator_sma','auth']);
