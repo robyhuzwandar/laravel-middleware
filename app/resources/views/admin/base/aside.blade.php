@@ -27,7 +27,7 @@
     <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li class="{{ $menu ==  'Dashboard' ? 'active' : ''  }}">
-            <a href="{{ route('dashboard') }}">
+            <a href="{{ route('admin.dashboard') }}">
                 <i class="fa fa-dashboard"></i>
                 <span>{{ $menu }}</span>
             </a>
