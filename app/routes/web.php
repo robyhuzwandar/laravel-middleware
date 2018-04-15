@@ -13,14 +13,18 @@
 
 
 Auth::routes();
-Route::get('/', 'DashboardController@dashboard')->name('mi.dashboard')->middleware(['auth']);
-Route::get('/admin', 'DashboardController@index')->name('admin.dashboard')->middleware(['admin','auth']);
+// Route::get('/', 'DashboardController@dashboard')->name('mi.dashboard')->middleware(['auth']);
+Route::get('/', 'DashboardController@index')->name('admin.dashboard')->middleware(['admin','auth']);
 
 //mi
 Route::group(['middleware' => 'operator_mi', 'auth'], function () {
+    Route::get('/', 'DashboardController@dashboard')->name('mi.dashboard');
     Route::get('/mi/index', 'MiController@index')->name('mi.index');
     Route::get('/mi/create', 'MiController@create')->name('mi.create');
     Route::post('/mi/create', 'MiController@store')->name('mi.store');
+    Route::get('/mi/{id}/edit', 'MiController@edit')->name('mi.edit');
+    Route::patch('/mi/{id}/edit', 'MiController@update')->name('mi.update');
+    Route::delete('/mi/{id}/delete', 'MiController@destroy')->name('mi.delete');
 });
 
 

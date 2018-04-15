@@ -23,7 +23,7 @@ class DashboardController extends Controller
             'menu' => 'Dashboard',
         );
 
-        return view('admin.dashboard.dashboard')->with($data);
+        return view('admin.dashboard')->with($data);
     }
 
     public function dashboard()

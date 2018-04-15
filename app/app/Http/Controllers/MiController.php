@@ -12,38 +12,21 @@ class MiController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        $data = self::all();
+        $data = Mi::all();
 
         return view('mi.index', compact('data'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('mi.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        self::create([
+        Mi::create([
             'name' => $request->name,
             'gender' => $request->gender,
         ]);
@@ -51,48 +34,29 @@ class MiController extends Controller
         return view('mi.create')->withSuccess('Data Berhasil di Simpan');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param int $id
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param int $id
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
+       $data = Mi::find($id);
+       return view('mi.edit', compact('data'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param int                      $id
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
+        $data = Mi::find($id);
+        $data->update([
+            'name' => $request->name,
+            'gender' => $request->gender,
+        ]);
+        return redirect(route('mi.index'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param int $id
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function destroy(Mi $id)
     {
+        $id->delete();
+        return redirect()->back();
     }
 }

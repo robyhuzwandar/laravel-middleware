@@ -21,18 +21,18 @@
                 @foreach($data as $d)
                     <tr>
                         <td width="3%">{{ $loop->index + 1 }}</td>
-                        <td id="#" width="16%">{{ $d->nama }}</td>
-                        <td width="16%">{{ $d->jenis_kelamin }}</td>
+                        <td id="#" width="16%">{{ $d->name }}</td>
+                        <td width="16%">{{ $d->gender }}</td>
                         <td>
                                 <div class="row">
                                     <div class="col col-sm-2">
-                                        <a href=""
+                                        <a href="{{ route('mi.edit', $d->id) }}"
                                            data-toggle="tooltip" data-placement="top" title="Edit"
                                            class="btn btn-xs btn-warning btn-flat"><i
                                                     class="glyphicon glyphicon-edit"></i></a>
                                     </div>
                                     <div class="col col-sm-2">
-                                        <form class="" action="" method="post">
+                                        <form class="" action="{{ route('mi.delete', $d->id) }}" method="post">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
                                             <button onclick="window.alert('Hapus pelanggan ?')" type="submit"
