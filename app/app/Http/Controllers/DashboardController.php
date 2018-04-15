@@ -26,6 +26,11 @@ class DashboardController extends Controller
         return view('admin.dashboard.dashboard')->with($data);
     }
 
+    public function dashboard()
+    {
+        return view('mi.dashboard');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

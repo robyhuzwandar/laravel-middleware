@@ -13,18 +13,15 @@
 
 
 Auth::routes();
+Route::get('/', 'DashboardController@dashboard')->name('mi.dashboard')->middleware(['auth']);
 Route::get('/admin', 'DashboardController@index')->name('admin.dashboard')->middleware(['admin','auth']);
 
 //mi
 Route::group(['middleware' => 'operator_mi', 'auth'], function () {
-Route::get('/mi/index', 'MiController@index')->name('mi.index');
-Route::get('/mi/create', 'MiController@create')->name('mi.create');
-Route::post('/mi/create', 'MiController@store')->name('mi.store');
+    Route::get('/mi/index', 'MiController@index')->name('mi.index');
+    Route::get('/mi/create', 'MiController@create')->name('mi.create');
+    Route::post('/mi/create', 'MiController@store')->name('mi.store');
 });
-
-
-
-
 
 
 Route::get('/smp', function(){

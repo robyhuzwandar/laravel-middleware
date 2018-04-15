@@ -10,11 +10,8 @@
                 <div class="box-body">
                     <div class="row">
                         <div class="col-md-8">
-                            Clouds Base
-                            <p>Clouds Base id a base of anything project so there is easy <br> to develop more sometime.</p>
-
-                            <h4>Made by:</h4>
-                            <p>Name: Darmawan Zulkifli</p>
+                            <h3>PONPES</h3>
+                            Cabang Madrasah Ibtidaiyah
                         </div>
                         <!-- /.col -->
                         <div class="col-md-4">
@@ -59,7 +56,7 @@
                 </div>
                 <!-- ./box-body -->
                 <div class="box-footer">
-                    <p style="font-color:green;">contuc: darmawan.zulkifli@gmail.com</p>
+                    <p style="font-color:green;"></p>
                 </div>
                 <!-- /.box-footer -->
             </div>
