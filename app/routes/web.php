@@ -9,12 +9,11 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
-
+ */
 
 Auth::routes();
 // Route::get('/', 'DashboardController@dashboard')->name('mi.dashboard')->middleware(['auth']);
-Route::get('/', 'DashboardController@index')->name('admin.dashboard')->middleware(['admin','auth']);
+Route::get('/', 'DashboardController@index')->name('admin.dashboard')->middleware(['admin']);
 
 //mi
 Route::group(['middleware' => 'operator_mi', 'auth'], function () {
@@ -27,10 +26,9 @@ Route::group(['middleware' => 'operator_mi', 'auth'], function () {
     Route::delete('/mi/{id}/delete', 'MiController@destroy')->name('mi.delete');
 });
 
-
-Route::get('/smp', function(){
+Route::get('/smp', function () {
     return 'Halaman smp';
-})->middleware(['operator_smp','auth']);
-Route::get('/sma', function(){
+})->middleware(['operator_smp', 'auth']);
+Route::get('/sma', function () {
     return 'Halaman sma';
-})->middleware(['operator_sma','auth']);
+})->middleware(['operator_sma', 'auth']);

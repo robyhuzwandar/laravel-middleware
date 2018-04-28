@@ -16,6 +16,8 @@ class ComposerStaticInit57410ec632e89182c4c533f7effdc432
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
+        'e23faeee409e941dc9b4c80386209c39' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/functions.php',
+        'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
         '377b22b161c09ed6e5152de788ca020a' => __DIR__ . '/..' . '/spatie/laravel-permission/src/helpers.php',
     );
 
@@ -103,7 +105,7 @@ class ComposerStaticInit57410ec632e89182c4c533f7effdc432
         'C' => 
         array (
             'Cron\\' => 5,
-            'Carbon\\' => 7,
+            'Collective\\Html\\' => 16,
         ),
         'A' => 
         array (
@@ -270,14 +272,18 @@ class ComposerStaticInit57410ec632e89182c4c533f7effdc432
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
         ),
-        'Carbon\\' => 
+        'Collective\\Html\\' => 
         array (
-            0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
+            0 => __DIR__ . '/..' . '/laravelcollective/html/src',
         ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
+    );
+
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/..' . '/nesbot/carbon/src',
     );
 
     public static $prefixesPsr0 = array (
@@ -297,6 +303,13 @@ class ComposerStaticInit57410ec632e89182c4c533f7effdc432
             'Mockery' => 
             array (
                 0 => __DIR__ . '/..' . '/mockery/mockery/library',
+            ),
+        ),
+        'L' => 
+        array (
+            'Laracasts\\Flash' => 
+            array (
+                0 => __DIR__ . '/..' . '/laracasts/flash/src',
             ),
         ),
         'J' => 
@@ -355,6 +368,13 @@ class ComposerStaticInit57410ec632e89182c4c533f7effdc432
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
+        'Collective\\Html\\Componentable' => __DIR__ . '/..' . '/laravelcollective/html/src/Componentable.php',
+        'Collective\\Html\\Eloquent\\FormAccessible' => __DIR__ . '/..' . '/laravelcollective/html/src/Eloquent/FormAccessible.php',
+        'Collective\\Html\\FormBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/FormBuilder.php',
+        'Collective\\Html\\FormFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/FormFacade.php',
+        'Collective\\Html\\HtmlBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlBuilder.php',
+        'Collective\\Html\\HtmlFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlFacade.php',
+        'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',
@@ -1759,6 +1779,14 @@ class ComposerStaticInit57410ec632e89182c4c533f7effdc432
         'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/ConsoleColor.php',
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/JakubOnderka/PhpConsoleHighlighter/Highlighter.php',
+        'JsonSerializable' => __DIR__ . '/..' . '/nesbot/carbon/src/JsonSerializable.php',
+        'Laracasts\\Flash\\Flash' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/Flash.php',
+        'Laracasts\\Flash\\FlashNotifier' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/FlashNotifier.php',
+        'Laracasts\\Flash\\FlashServiceProvider' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/FlashServiceProvider.php',
+        'Laracasts\\Flash\\LaravelSessionStore' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/LaravelSessionStore.php',
+        'Laracasts\\Flash\\Message' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/Message.php',
+        'Laracasts\\Flash\\OverlayMessage' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/OverlayMessage.php',
+        'Laracasts\\Flash\\SessionStore' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/SessionStore.php',
         'Laravel\\Tinker\\ClassAliasAutoloader' => __DIR__ . '/..' . '/laravel/tinker/src/ClassAliasAutoloader.php',
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
@@ -3672,6 +3700,7 @@ class ComposerStaticInit57410ec632e89182c4c533f7effdc432
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit57410ec632e89182c4c533f7effdc432::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit57410ec632e89182c4c533f7effdc432::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit57410ec632e89182c4c533f7effdc432::$fallbackDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit57410ec632e89182c4c533f7effdc432::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit57410ec632e89182c4c533f7effdc432::$classMap;
 

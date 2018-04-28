@@ -40,8 +40,8 @@ class MiController extends Controller
 
     public function edit($id)
     {
-       $data = Mi::find($id);
-       return view('mi.edit', compact('data'));
+        $data = Mi::find($id);
+        return view('mi.edit', compact('data'));
     }
 
     public function update(Request $request, $id)
